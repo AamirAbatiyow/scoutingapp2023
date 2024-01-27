@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background">
+
+    <Button
+        android:id="@+id/backToTeleButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="backTele"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nextToPopUpButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="toPopup"
+        android:text="Next"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/endgameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Endgame"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toStartOf="@+id/nextToPopUpButton"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toEndOf="@+id/backToTeleButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="250dp"
+        android:layout_height="152dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/endgameChargeStationTextView">
+
+        <RadioButton
+            android:id="@+id/endgameEngagedRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@color/LightGray"
+            android:buttonTint="@color/ChargedBlue"
+            android:text="Engaged"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/endgameDockedRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@color/LightGray"
+            android:buttonTint="@color/ChargedBlue"
+            android:text="Docked"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/endgameParkedRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@color/LightGray"
+            android:buttonTint="@color/ChargedBlue"
+            android:text="Parked"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/endgameNotParkedRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@color/LightGray"
+            android:buttonTint="@color/ChargedBlue"
+            android:text="Not Parked"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/endgameChargeStationTextView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/ChargedOrange"
+        android:gravity="center"
+        android:text="Charge Station"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/endgameTextView" />
+
+    <EditText
+        android:id="@+id/endgameCommentsEditText"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:background="@color/LightGray"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="28dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Comments"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

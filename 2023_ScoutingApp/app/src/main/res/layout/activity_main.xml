@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/nextToAutoButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="36dp"
+        android:onClick="toAuto"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoutNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Scout Name"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/scoutNameEditText"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/LightGray"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoutNameTextView" />
+
+    <TextView
+        android:id="@+id/matchNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Match Number"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoutNameEditText" />
+
+    <EditText
+        android:id="@+id/matchNumberEditText"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/LightGray"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/matchNumberTextView" />
+
+    <TextView
+        android:id="@+id/teamNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Team Number"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/matchNumberEditText" />
+
+    <EditText
+        android:id="@+id/teamNumberEditText"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/LightGray"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teamNumberTextView" />
+
+    <Spinner
+        android:id="@+id/driveStationSelectionSpinner"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/LightGray"
+        android:spinnerMode="dropdown"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toStartOf="@+id/nextToAutoButton"
+        app:layout_constraintTop_toTopOf="@+id/nextToAutoButton" />
+
+    <RadioGroup
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        app:layout_constraintEnd_toEndOf="@+id/preloadedGamePieceTextView"
+        app:layout_constraintTop_toBottomOf="@+id/preloadedGamePieceTextView">
+
+        <RadioButton
+            android:id="@+id/coneRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="Cone"
+            android:background="@color/LightGray"
+            android:buttonTint="@color/ChargedBlue"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/cubeRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="@color/LightGray"
+            android:buttonTint="@color/ChargedBlue"
+            android:text="Cube"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/preloadedGamePieceTextView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/ChargedOrange"
+        android:gravity="center"
+        android:text="Preloaded Game Piece"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nextToAutoButton" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="550dp"
+        android:layout_height="450dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/_023fieldblue" />
+
+    <RadioButton
+        android:id="@+id/fieldPositionTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="130dp"
+        android:buttonTint="@color/ChargedBlue"
+        android:onClick="clicked"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintEnd_toStartOf="@+id/fieldPositionOne"
+        app:layout_constraintTop_toTopOf="@+id/fieldPositionOne" />
+
+    <RadioButton
+        android:id="@+id/fieldPositionThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="130dp"
+        android:buttonTint="@color/ChargedBlue"
+        android:onClick="clicked"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintEnd_toStartOf="@+id/fieldPositionTwo"
+        app:layout_constraintTop_toTopOf="@+id/fieldPositionTwo" />
+
+    <RadioButton
+        android:id="@+id/fieldPositionOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="208dp"
+        android:buttonTint="@color/ChargedBlue"
+        android:onClick="clicked"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/startingPositionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Starting Position"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teamNumberEditText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

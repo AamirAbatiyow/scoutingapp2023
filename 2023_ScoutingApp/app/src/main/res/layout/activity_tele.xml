@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background">
+
+    <CheckBox
+        android:id="@+id/substationGrabCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/ChargedBlue"
+        android:text="Station"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/shelfGrabCheckBox"
+        app:layout_constraintStart_toStartOf="@+id/shelfGrabCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/shelfGrabCheckBox" />
+
+    <TextView
+        android:id="@+id/pickUpTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:text="PickUp"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teleCommentsEditText" />
+
+    <Button
+        android:id="@+id/backToAutoButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="backAuto"
+        android:text="Back"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nextToEndGameButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="toEndgame"
+        android:text="Next"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/teleoperatedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Teleoperated"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toStartOf="@+id/nextToEndGameButton"
+        app:layout_constraintStart_toEndOf="@+id/backToAutoButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mechanicalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Mechanical"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teleCommentsEditText" />
+
+    <TextView
+        android:id="@+id/gameplayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="30dp"
+        android:text="Gameplay"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/scoringTextView"
+        app:layout_constraintStart_toEndOf="@+id/mechanicalTextView"
+        app:layout_constraintTop_toBottomOf="@+id/teleCommentsEditText" />
+
+    <TextView
+        android:id="@+id/scoringTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="90dp"
+        android:text="Scoring"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/pickUpTextView"
+        app:layout_constraintStart_toEndOf="@+id/gameplayTextView"
+        app:layout_constraintTop_toBottomOf="@+id/teleCommentsEditText" />
+
+    <CheckBox
+        android:id="@+id/diedCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/ChargedBlue"
+        android:text="Died"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/mechanicalTextView"
+        app:layout_constraintStart_toStartOf="@+id/mechanicalTextView"
+        app:layout_constraintTop_toBottomOf="@+id/mechanicalTextView" />
+
+    <CheckBox
+        android:id="@+id/playedDefenseCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/ChargedBlue"
+        android:text="Played Def"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/gameplayTextView"
+        app:layout_constraintStart_toStartOf="@+id/gameplayTextView"
+        app:layout_constraintTop_toBottomOf="@+id/gameplayTextView" />
+
+    <CheckBox
+        android:id="@+id/conesCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/ChargedBlue"
+        android:text="Cones"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/scoringTextView"
+        app:layout_constraintStart_toStartOf="@+id/scoringTextView"
+        app:layout_constraintTop_toBottomOf="@+id/scoringTextView" />
+
+    <CheckBox
+        android:id="@+id/restartedCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/ChargedBlue"
+        android:text="Restarted"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/diedCheckBox"
+        app:layout_constraintStart_toStartOf="@+id/diedCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/diedCheckBox" />
+
+    <CheckBox
+        android:id="@+id/facedDefenseCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/ChargedBlue"
+        android:text="Faced Def"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/playedDefenseCheckBox"
+        app:layout_constraintStart_toStartOf="@+id/playedDefenseCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/playedDefenseCheckBox" />
+
+    <CheckBox
+        android:id="@+id/cubesCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/ChargedBlue"
+        android:text="Cubes"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/conesCheckBox"
+        app:layout_constraintStart_toStartOf="@+id/conesCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/conesCheckBox" />
+
+    <CheckBox
+        android:id="@+id/brokeCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/ChargedBlue"
+        android:text="Broke"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/restartedCheckBox"
+        app:layout_constraintStart_toStartOf="@+id/restartedCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/restartedCheckBox" />
+
+    <CheckBox
+        android:id="@+id/fellOverCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/ChargedBlue"
+        android:text="Fell Over"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/facedDefenseCheckBox"
+        app:layout_constraintStart_toStartOf="@+id/facedDefenseCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/facedDefenseCheckBox" />
+
+    <CheckBox
+        android:id="@+id/rightedCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/ChargedBlue"
+        android:text="Righted"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/cubesCheckBox"
+        app:layout_constraintStart_toStartOf="@+id/cubesCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/cubesCheckBox" />
+
+    <EditText
+        android:id="@+id/teleCommentsEditText"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/LightGray"
+        android:ems="10"
+        android:hint="Comments"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gamePiecePointsTextView" />
+
+    <TextView
+        android:id="@+id/gamePiecePointsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="0"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gamePieceTextView" />
+
+    <Button
+        android:id="@+id/gamePieceIncrment"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="32dp"
+        android:onClick="pointsIncrement"
+        android:text="+"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintBottom_toBottomOf="@+id/gamePiecePointsTextView"
+        app:layout_constraintStart_toEndOf="@+id/gamePieceTextView"
+        app:layout_constraintTop_toTopOf="@+id/gamePiecePointsTextView" />
+
+    <Button
+        android:id="@+id/gamePieceDecrement"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="pointsDecrement"
+        android:text="-"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintBottom_toBottomOf="@+id/gamePiecePointsTextView"
+        app:layout_constraintEnd_toStartOf="@+id/gamePieceTextView"
+        app:layout_constraintTop_toTopOf="@+id/gamePiecePointsTextView" />
+
+    <TextView
+        android:id="@+id/gamePieceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Picked Up Game Piece"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lowPointsText" />
+
+    <CheckBox
+        android:id="@+id/groundGrabCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/ChargedBlue"
+        android:text="Ground"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/pickUpTextView"
+        app:layout_constraintStart_toStartOf="@+id/pickUpTextView"
+        app:layout_constraintTop_toBottomOf="@+id/pickUpTextView" />
+
+    <CheckBox
+        android:id="@+id/shelfGrabCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/ChargedBlue"
+        android:text="Shelf"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/groundGrabCheckBox"
+        app:layout_constraintStart_toStartOf="@+id/groundGrabCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/groundGrabCheckBox" />
+
+    <TextView
+        android:id="@+id/teleTopTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="12dp"
+        android:text="Top"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/topPointsText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teleoperatedTextView" />
+
+    <TextView
+        android:id="@+id/teleMiddleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Middle"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topPointsText" />
+
+    <TextView
+        android:id="@+id/teleBottomTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Bottom"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/midPointsText" />
+
+    <TextView
+        android:id="@+id/topPointsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="0"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teleTopTextView" />
+
+    <TextView
+        android:id="@+id/midPointsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="0"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teleMiddleTextView" />
+
+    <TextView
+        android:id="@+id/lowPointsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="0"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teleBottomTextView" />
+
+    <Button
+        android:id="@+id/teleTopDecrementButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="topPointsDecrement"
+        android:text="-"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintBottom_toBottomOf="@+id/topPointsText"
+        app:layout_constraintEnd_toStartOf="@+id/topPointsText"
+        app:layout_constraintTop_toTopOf="@+id/topPointsText"
+        app:layout_constraintVertical_bias="0.413" />
+
+    <Button
+        android:id="@+id/teleTopIncrementButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="32dp"
+        android:onClick="topPointsIncrement"
+        android:text="+"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintBottom_toBottomOf="@+id/topPointsText"
+        app:layout_constraintStart_toEndOf="@+id/topPointsText"
+        app:layout_constraintTop_toTopOf="@+id/topPointsText"
+        app:layout_constraintVertical_bias="0.413" />
+
+    <Button
+        android:id="@+id/teleMiddleDecrementButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="midPointsDecrement"
+        android:text="-"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintBottom_toBottomOf="@+id/midPointsText"
+        app:layout_constraintEnd_toStartOf="@+id/midPointsText"
+        app:layout_constraintTop_toTopOf="@+id/midPointsText"
+        app:layout_constraintVertical_bias="0.551" />
+
+    <Button
+        android:id="@+id/teleMiddleIncrementButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="32dp"
+        android:onClick="midPointsIncrement"
+        android:text="+"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintBottom_toBottomOf="@+id/midPointsText"
+        app:layout_constraintStart_toEndOf="@+id/midPointsText"
+        app:layout_constraintTop_toTopOf="@+id/midPointsText" />
+
+    <Button
+        android:id="@+id/teleBottomDecrementButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="lowPointsDecrement"
+        android:text="-"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintBottom_toBottomOf="@+id/lowPointsText"
+        app:layout_constraintEnd_toStartOf="@+id/lowPointsText"
+        app:layout_constraintTop_toTopOf="@+id/lowPointsText"
+        app:layout_constraintVertical_bias="0.448" />
+
+    <Button
+        android:id="@+id/teleBottomIncrementButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="32dp"
+        android:onClick="lowPointsIncrement"
+        android:text="+"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintBottom_toBottomOf="@+id/lowPointsText"
+        app:layout_constraintStart_toEndOf="@+id/lowPointsText"
+        app:layout_constraintTop_toTopOf="@+id/lowPointsText"
+        app:layout_constraintVertical_bias="0.448" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

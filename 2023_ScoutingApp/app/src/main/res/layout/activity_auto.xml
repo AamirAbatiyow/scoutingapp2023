@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background">
+
+    <Button
+        android:id="@+id/backToMainButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="backMain"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nextToTeleButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="toTele"
+        android:text="Next"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/autonomousTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Autonomous"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toStartOf="@+id/nextToTeleButton"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toEndOf="@+id/backToMainButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/mobilityCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Mobility"
+        android:buttonTint="@color/ChargedBlue"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autonomousTextView" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="250dp"
+        android:layout_height="114dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoChargeStationTextView">
+
+        <RadioButton
+            android:id="@+id/autoEngagedRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:text="Engaged"
+            android:background="@color/LightGray"
+            android:buttonTint="@color/ChargedBlue"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/autoDockedRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@color/LightGray"
+            android:buttonTint="@color/ChargedBlue"
+            android:text="Docked"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/autoNotDockedRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@color/LightGray"
+            android:buttonTint="@color/ChargedBlue"
+            android:text="Not Docked"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/autoChargeStationTextView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@color/ChargedOrange"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_marginBottom="175dp"
+        android:text="Charge Station"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/autoCommentEditText"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/LightGray"
+        android:ems="10"
+        android:hint="Comments"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoBottomTextView" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="475dp"
+        android:layout_height="50dp"
+        android:orientation='horizontal'
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobilityCheckBox">
+
+        <RadioButton
+            android:id="@+id/gridOneRadioButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:buttonTint="@color/ChargedBlue"
+            android:text="Barrier Grid"
+            android:textColor="@color/ChargedOrange"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/gridTwoRadioButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:buttonTint="@color/ChargedBlue"
+            android:text="Coop Grid"
+            android:textColor="@color/ChargedOrange"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/gridThreeRadioButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:buttonTint="@color/ChargedBlue"
+            android:text="Wall Grid"
+            android:textColor="@color/ChargedOrange"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/topTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Top"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+    <TextView
+        android:id="@+id/autoTopTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="0"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topTextView" />
+
+    <Button
+        android:id="@+id/autoTopIncrementButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="32dp"
+        android:onClick="topPointsIncrement"
+        android:text="+"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintBottom_toBottomOf="@+id/autoTopTextView"
+        app:layout_constraintStart_toEndOf="@+id/autoTopTextView"
+        app:layout_constraintTop_toTopOf="@+id/autoTopTextView" />
+
+    <Button
+        android:id="@+id/autoTopDecrementButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="topPointsDecrement"
+        android:text="-"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintBottom_toBottomOf="@+id/autoTopTextView"
+        app:layout_constraintEnd_toStartOf="@+id/autoTopTextView"
+        app:layout_constraintTop_toTopOf="@+id/autoTopTextView" />
+
+    <TextView
+        android:id="@+id/middleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Middle"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoTopTextView" />
+
+    <TextView
+        android:id="@+id/autoMiddleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="0"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/middleTextView" />
+
+    <Button
+        android:id="@+id/autoMiddleIncrementButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="32dp"
+        android:onClick="midPointsIncrement"
+        android:text="+"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintBottom_toBottomOf="@+id/autoMiddleTextView"
+        app:layout_constraintStart_toEndOf="@+id/autoMiddleTextView"
+        app:layout_constraintTop_toTopOf="@+id/autoMiddleTextView" />
+
+    <Button
+        android:id="@+id/autoMiddleDecrementButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="midPointsDecrement"
+        android:text="-"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintBottom_toBottomOf="@+id/autoMiddleTextView"
+        app:layout_constraintEnd_toStartOf="@+id/autoMiddleTextView"
+        app:layout_constraintTop_toTopOf="@+id/autoMiddleTextView" />
+
+    <TextView
+        android:id="@+id/bottomTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Bottom"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoMiddleTextView" />
+
+    <TextView
+        android:id="@+id/autoBottomTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="0"
+        android:textColor="@color/ChargedOrange"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomTextView" />
+
+    <Button
+        android:id="@+id/autoBottomIncrementButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="32dp"
+        android:onClick="lowPointsIncrement"
+        android:text="+"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintBottom_toBottomOf="@+id/autoBottomTextView"
+        app:layout_constraintStart_toEndOf="@+id/autoBottomTextView"
+        app:layout_constraintTop_toTopOf="@+id/autoBottomTextView" />
+
+    <Button
+        android:id="@+id/autoBottomDecrementButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="lowPointsDecrement"
+        android:text="-"
+        android:textSize="20sp"
+        app:backgroundTint="@color/ChargedOrange"
+        app:layout_constraintBottom_toBottomOf="@+id/autoBottomTextView"
+        app:layout_constraintEnd_toStartOf="@+id/autoBottomTextView"
+        app:layout_constraintTop_toTopOf="@+id/autoBottomTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
