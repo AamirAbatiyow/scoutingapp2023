@@ -1,4 +1,4 @@
-package com.example.a2023_scoutingapp;
+ package com.example.a2023_scoutingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
